@@ -1,0 +1,32 @@
+{% extends "AppDelafuente/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Aqui puedes ver los entregables
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="/AppDelafuente/resultados3" method="GET">
+
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+<p>Estamos buscando los entregables: {{nombre}}</p>
+
+    {% for entregable in entregables %}
+
+    <p>Nombre: {{entregable.nombre}} ---- Comision: {{entregable.fechaEntrega}}</p>
+
+    {% endfor %}
+
+{% endblock %}

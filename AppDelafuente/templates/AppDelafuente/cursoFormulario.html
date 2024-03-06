@@ -1,0 +1,32 @@
+{% extends "AppDelafuente/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Crea tus cursos
+
+{% endblock %}
+
+{% block descripcion %}
+
+<form action="" method="POST"> {% csrf_token %}
+        
+
+    <table>
+
+        {{form1.as_table}}
+
+    </table>
+
+    <input type="submit" value="Enviar">
+
+
+</form>
+
+<p>Estamos creando un curso</p>
+
+{% endblock %}    
+

@@ -1,0 +1,35 @@
+{% extends "AppDelafuente/padre.html" %}
+
+
+{% load static %}
+
+
+{% block titulo %}
+
+Aqui puedes ver los estudiantes
+
+{% endblock %}
+
+
+{% block descripcion %}
+
+<form action="/AppDelafuente/resultados1" method="GET">
+
+    <input type="text" name="nombre" id="nombre">
+
+    <input type="submit" value="Buscar">
+
+
+</form>
+
+<p>Estamos buscando al estudiante: {{nombre}}</p>
+
+{% for estudiante in estudiantes %}
+
+<p>Nombre: {{estudiante.nombre}} ---- Apellido: {{estudiante.apellido}}</p>
+
+{% endfor %}
+
+{% endblock %}
+
+
